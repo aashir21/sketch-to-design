@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/theme/provider";
+import { ThemeProvider } from "@/providers/theme/provider";
 import { Toaster } from "@/components/ui/sonner";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { ConvexClientProvider } from "@/convex/provider";
-import ReduxProvider from "@/redux/provider";
 import { ProfileQuery } from "@/convex/query.config";
 import { ConvexUserRaw, normalizeProfile } from "@/types/user";
+import ReduxProvider from "@/providers/redux/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
