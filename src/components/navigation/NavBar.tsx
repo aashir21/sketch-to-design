@@ -8,7 +8,7 @@ import { api } from '../../../convex/_generated/api';
 import { CircleQuestionMark, Hash, LayoutTemplate, User } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { ThemeToggler } from '@/theme/ThemeToggler';
+import { ThemeToggler } from '@/components/theme/ThemeToggler';
 import { useAppSelector } from '@/redux/store';
 import CreateProject from '../buttons/project/CreateProject';
 
@@ -49,7 +49,7 @@ const NavBar = () => {
     ]
 
     return (
-        <div className='grid grid-cols-2 lg:grid-cols-3 p-6 fixedd top-0 left-0 right-0 z-50'>
+        <div className='grid grid-cols-2 lg:grid-cols-3 p-6 fixed top-0 left-0 right-0 z-50'>
 
             <div className='flex items-center gap-4'>
                 <Link
@@ -58,18 +58,18 @@ const NavBar = () => {
                 >
                     <div className='w-4 h-4 rounded-full bg-white'></div>
                 </Link>
-            </div>
-
-            {
-                !hasCanvas ||
-                (!hasStyleGuide && (
-                    <div className='lg:inline-block hidden rounded-full text-primary/60 border border/white/[0.12] backdrop-blur-xl bg-white/[0.08]
+                {
+                    !hasCanvas ||
+                    (!hasStyleGuide && (
+                        <div className='lg:inline-block hidden rounded-full text-primary/60 border border/white/[0.12] backdrop-blur-xl bg-white/[0.08]
                         px-4 py-2 text-sm saturate-150
                     '>
-                        Project / {project?.name}
-                    </div>
-                ))
-            }
+                            Projects / {project?.name}
+                        </div>
+                    ))
+                }
+            </div>
+
 
             <div className='lg:flex hidden items-center justify-center gap-2'>
                 <div className='flex items-center gap-2 backdrop-blur-xl bg-white/[0.08] border border-white/[0.12] rounded-full p-2 saturate-150'>
