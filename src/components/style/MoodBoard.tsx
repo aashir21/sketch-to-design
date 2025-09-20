@@ -157,7 +157,7 @@ const MoodBoard = ({ guideImages }: Props) => {
                     className="hidden"
                 />
             </div>
-            <Button className="w-fit" size={"lg"}>
+            <Button disabled={images.length === 0} className="w-fit" size={"lg"}>
                 Generate Style Guide <Sparkle />
             </Button>
             {
